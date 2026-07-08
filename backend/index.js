@@ -64,9 +64,11 @@ app.get('/api/analytics/:shortCode', (req,res)=>{
         })
     }
 
-    return res.json({
-        clicks: urlEntry.clicks
-    })
+    return res.status(200).json({
+        msg: "Analytics fetched successfully",
+        data: urlEntry
+    });
+
 })
 
 
